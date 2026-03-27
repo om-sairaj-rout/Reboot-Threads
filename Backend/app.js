@@ -15,11 +15,11 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(express.json());
+app.use(express.json());  
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", submitQuotationRouter);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+  console.log(`Server running on port ${process.env.PORT || 3000}`);
 });
