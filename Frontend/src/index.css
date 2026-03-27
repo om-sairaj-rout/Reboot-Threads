@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Yahan font define karein */
+  --font-poppins: "Poppins", sans-serif;
+  --color-main-text: #86868A;
+}
+
+/* Poori body par apply karne ke liye */
+body {
+  font-family: var(--font-poppins);
+  color: var();
+}
