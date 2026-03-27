@@ -3,11 +3,8 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 export const submitQuotation = async (data) => {
   const res = await fetch(`${BASE_URL}/api/submit-quotation`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json" // JSON hai to ye zaruri
-    },
     credentials: "include", // 👈 important for CORS
-    body: JSON.stringify(data) // JSON send karne ke liye
+    body: data // JSON send karne ke liye
   });
 
    const result = await res.json();
