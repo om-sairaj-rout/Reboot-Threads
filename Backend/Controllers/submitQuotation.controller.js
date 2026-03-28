@@ -5,53 +5,71 @@ const submitQuotationController = async (req, res) => {
     const { name, email, phone, product, message } = req.body;
     const file = req.file;
 
+    // Debugging ke liye logs (Render dashboard mein dikhenge)
+    console.log("--- New Quotation Request ---");
+    console.log("Data:", { name, email, phone, product });
+    console.log("File Received:", file ? file.originalname : "No file uploaded");
+
+    // 1. Transporter Setup
     const transporter = nodemailer.createTransport({
-       host: "smtp.gmail.com",
-      port: 465,
-      secure: true, // SSL
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, // Reminder: Use App Password here!
       },
     });
 
+    // 2. Email Options Setup
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Gmail aksar 'from' ko override kar deta hai
       to: process.env.EMAIL_USER, 
-      replyTo: process.env.EMAIL_USER, 
+      replyTo: email, // Taaki aap reply karo toh seedha customer ko jaye
       subject: `New Quotation Request: ${product}`,
       text: `
-      You have received a new quotation request!
+        You have received a new quotation request!
 
-      ---------------------------------------
-      Customer Details:
-      ---------------------------------------
-      Name:    ${name}
-      Email:   ${email}
-      Phone:   ${phone}
-      
-      ---------------------------------------
-      Order Details:
-      ---------------------------------------
-      Product: ${product}
-      Message: ${message}
+        ---------------------------------------
+        Customer Details:
+        ---------------------------------------
+        Name:    ${name}
+        Email:   ${email}
+        Phone:   ${phone}
+        
+        ---------------------------------------
+        Order Details:
+        ---------------------------------------
+        Product: ${product}
+        Message: ${message}
       `,
+      // Attachment logic with Buffer
       attachments: file
         ? [
             {
               filename: file.originalname,
-              path: file.path,
+              content: file.buffer,
+              contentType: file.mimetype, // CRITICAL: Ye batana zaroori hai ki file kya hai
             },
           ]
         : [],
     };
 
+    // 3. Send Email
     await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ success: true, message: "Quotation sent successfully" });
+    console.log("Email sent successfully!");
+    return res.status(200).json({ 
+      success: true, 
+      message: "Quotation sent successfully" 
+    });
+
   } catch (error) {
-    console.error("Email Error:", error);
-    res.status(500).json({ success: false, message: "Email failed to send" });
+    // Ye log aapko Render par error ka asli chehra dikhayega
+    console.error("DETAILED EMAIL ERROR:", error);
+
+    return res.status(500).json({ 
+      success: false, 
+      message: "Server Error: " + error.message 
+    });
   }
 };
 
