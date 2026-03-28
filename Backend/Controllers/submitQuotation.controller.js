@@ -5,11 +5,6 @@ const submitQuotationController = async (req, res) => {
     const { name, email, phone, product, message } = req.body;
     const file = req.file;
 
-    // Debugging ke liye logs (Render dashboard mein dikhenge)
-    console.log("--- New Quotation Request ---");
-    console.log("Data:", { name, email, phone, product });
-    console.log("File Received:", file ? file.originalname : "No file uploaded");
-
     // 1. Transporter Setup
     const transporter = nodemailer.createTransport({
       service: "gmail",
