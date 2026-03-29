@@ -16,8 +16,8 @@ const Header = ({isSideBarOpen,setIsSideBarOpen}) => {
             <a href="#">
                 <FaInstagram />
             </a>
-            <a href="tel:+919958388175">+91 9287262581</a>
-            <a href="mailto:RebootThreads@gmail.comprint.com">RebootThreads@gmail.com</a>
+            <a href="tel:+919958388175">+91 9958388175</a>
+            <a href="mailto:rebootthreadsglobal@gmail.comprint.com">rebootthreadsglobal@gmail.com</a>
             
         </div>
         <div className="w-full h-23 bg-white shadow-lg sticky top-0 z-50 flex justify-between items-center px-22">
