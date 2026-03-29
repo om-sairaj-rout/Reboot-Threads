@@ -210,7 +210,7 @@ const GetQuotation = () => {
               </div>
               <div className="h-full w-[80%]">
                 <h1 className="text-2xl font-semibold">Call Us</h1>
-                <p> +91 9871 102 144 </p>
+                <p> +91 9958388175 </p>
               </div>
             </div>
             <div className="w-full h-1/2 flex">
@@ -219,7 +219,7 @@ const GetQuotation = () => {
               </div>
               <div className="h-full w-[80%]">
                 <h1 className="text-2xl font-semibold">Email Us</h1>
-                <p>RebootThreads@gmail.com</p>
+                <p>rebootthreadsglobal@gmail.com</p>
               </div>
             </div>
           </div>
