@@ -57,7 +57,7 @@ const About = () => {
             Reboot Threads is a Printing Company based in Delhi, India with the
             best quality at the best prices. We have specialized in all
             customized corporate and individual printing requirements like
-            T-shirts, Hoodies, Mugs, and Caps.
+            T-shirts and Hoodies.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, x: 20 }}
@@ -80,12 +80,12 @@ const About = () => {
           best prices. We are providing our services since 2020 and delivered
           high-quality products to our clients. We have specialized in all
           customized corporate and individual printing requirements like
-          T-shirts, Hoodies, Mugs, and Caps. Custom printing items are always
+          T-shirts and Hoodies. Custom printing items are always
           the best and right way to promote your company.
         </p>
         <p className="text-lg py-3">
           We have numerous years of experience in College Event T-shirts,
-          Corporate wear, Promotional products, and Corporate gifting & we do
+          Corporate wear and Promotional products & we do
           all types of printing like Sublimation printing, Screen Printing,
           Plastic sol, Rubber printing, etc. Our dedicated team regularly checks
           the quality of each product pre and post-production. We aim to give
@@ -174,7 +174,7 @@ const About = () => {
           <p className="py-5">
             When it involves custom printing offerings in Delhi, Reboot Threads
             sticks out as a trusted and dependable call. From t-shirt printing
-            to personalised mugs, hoodies, and caps, we cater to a huge variety
+            to personalised hoodies, we cater to a huge variety
             of custom printing needs for people, groups, and corporations.
             Whether you are seeking to sell your brand or create customised
             gifts, Reboot Threads promises great merchandise with fast
@@ -252,7 +252,7 @@ const About = () => {
           <p className="py-5">
             For all your custom printing desires, consider Reboot Threads to
             deliver excellent products that exceed your expectations. Whether it
-            is t-shirts, mugs, hoodies, or caps, we've the know-how to carry
+            is t-shirts or hoodies, we've the know-how to carry
             your designs to life. Contact us nowadays or visit our online store
             to get began!
           </p>
