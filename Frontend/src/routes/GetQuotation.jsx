@@ -210,7 +210,7 @@ const GetQuotation = () => {
               </div>
               <div className="h-full w-[80%]">
                 <h1 className="text-2xl font-semibold">Call Us</h1>
-                <p> +91 9958388175 </p>
+                <p> +91 9310248736 </p>
               </div>
             </div>
             <div className="w-full h-1/2 flex">

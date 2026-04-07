@@ -526,7 +526,7 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{duration: 0.8, ease: "easeInOut"}}
           className="text-3xl sm:text-4xl font-semibold"> 
-            +(91) 9958388175
+            +(91) 9310248736
           </motion.h1>
           <motion.h1 
           initial = {{opacity:0, y: -20}} 
@@ -813,7 +813,7 @@ const Home = () => {
             high-quality karol bagh t shirt printing, Cotton T shirt Printing in
             Karol Bagh and hoodie printing solutions tailored to your needs. Now
             find the contact no of custom professional t shirt printing in
-            Delhi, Noida – Call at +91-9958388175
+            Delhi, Noida – Call at +91-9310248736
           </p>
         </div>
       </div>
