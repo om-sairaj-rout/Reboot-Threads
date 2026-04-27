@@ -55,8 +55,8 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen }) => {
 
             <ul className="flex flex-col items-center justify-center gap-4 mt-10 pb-10">
                 <li className="text-2xl hover:text-pink-400 cursor-pointer"><FaInstagram /></li>
-                <li className="flex gap-2 items-center text-sm"><MdEmail className="text-xl" /><span>RebootThreads@gmail.com</span></li>
-                <li className="text-lg font-semibold tracking-wide"><span>+91 98765 54422</span></li>
+                <li className="flex gap-2 items-center text-sm"><MdEmail className="text-xl" /><a href="mailto:rebootthreadsglobal@gmail.com">rebootthreadsglobal@gmail.com</a></li>
+                <li className="text-lg font-semibold tracking-wide"><a href="tel:+919310248736">+91 9310248736</a></li>
             </ul>
         </div>
     )
